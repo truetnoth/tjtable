@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Т—Ж табличник</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <svg class="xjE89" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 14" fill="#000000"><path d="M90.5 0L85 4.9V0h-6.3v4.9L73.3 0h-8.8l8.6 6.7-9.3 7.3h8.8l6.1-5.5V14H85V8.5l6.1 5.5h8.8l-9.3-7.3L99.3 0h-8.8zM0 0v5.5h7.4V14h6.4V5.5h7.4V0H0zm25.2 9h38.6V4H25.2v5z"></path></svg>
+    <h2>Привет!</h2>
+    <p>это Т—Ж табличник, он нужен верстальщикам чтобы не умирать от верстки таблиц.</p>
+    <p>Работает он так: </p>
+    <ol>
+      <li>Подготовь .CSV файл с табличными данными <strong>конкретной таблицы</strong>, не бойся, это&nbsp;намного проще чем верстать таблицу, и вносить изменения тоже проще.</li>
+      <li>Выбери и загрузи .CSV файл, нажав на большую кнопку ниже</li>
+      <li>Нажми кнопку «Забрать код таблицы»</li>
+      <li>Вставь его в редактор</li>
+    </ol>
+  </header>
+  <main>
+    <form action="GET">
+      <div class="platform_chooser">
+        <input type="radio" name="platform" id="button_desktop" checked>
+        <label for="button_desktop">Таблица для десктопа</label>
+        <input type="radio" name="platform" id="button_mobile">
+        <label for="button_mobile">Таблица для мобилок и планшетов</label>
+      </div>
+      <input type="file" name="file" id="file" class="inputfile" accept=".csv">
+      <label for="file">Загрузи .csv файл с таблицей</label>
+    </form>
+    <button class="take_result">Забрать код таблицы</button>
+  </main>
+  <section>
+    <button onclick="showInstruction()" class="instruction_button">Инструкция по созданию .CSV <span class="arrow"></span> </button>
+    <div class="instruction_container">
+      <ul>
+        <li>CSV – это текстовый формат отображения табличных данных. Он очень простой в освоении;</li>
+        <li>Откройте свой любимый текстовый редактор и создайте в нем файл в формате .csv;</li>
+        <li>В формате .csv все данные по горизонтали разделяются между собой точкой с запятой (;), все данные по вертикали — переносом строки;</li>
+        <li>Первая строка вашего файла будет содержать 1+N чисел, где первое число это ширина всей таблицы, а последующие ширины каждого столбца;</li>
+        <li>Вторая строка будет представлять из себя заголовки таблицы</li>
+        <li>Дальше идут табличные данные. Для примера:</li>
+      </ul>
+      <img src="img_1.png" alt="" width="100%">
+      <p>У меня в VSCode стоит очень удобный плагин, который подсвечивает столбцы в .csv, вот <a href="https://github.com/mechatroner/vscode_rainbow_csv">ссылка</a></p>
+      <ul>
+        <li>На выходе мы получим такую таблицу:</li>
+      </ul>
+      <p class="codepen" data-height="591" data-theme-id="dark" data-default-tab="html" data-user="truetnoth" data-slug-hash="YzXNGda" style="height: 591px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="YzXNGda">
+        <span>See the Pen <a href="https://codepen.io/truetnoth/pen/YzXNGda">
+        YzXNGda</a> by Valeriy Trusevich (<a href="https://codepen.io/truetnoth">@truetnoth</a>)
+        on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+      <ul>
+        <li>Для мобильной версии всё аналогично:</li>
+      </ul>
+      <img src="img_2.png" alt="" width="100%">
+      <ul>
+        <li>Вот такая табличка получится в итоге:</li>
+      </ul>
+      <p class="codepen" data-height="825" data-theme-id="dark" data-default-tab="html" data-user="truetnoth" data-slug-hash="VwLPKqQ" style="height: 825px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="VwLPKqQ">
+        <span>See the Pen <a href="https://codepen.io/truetnoth/pen/VwLPKqQ">
+        VwLPKqQ</a> by Valeriy Trusevich (<a href="https://codepen.io/truetnoth">@truetnoth</a>)
+        on <a href="https://codepen.io">CodePen</a>.</span>
+      </p>
+    </div>
+  </section>
+  <footer>
+    <h3>Сделали Миша и Валера, с ❤️ к Т—Ж</h3>
+  </footer>
+  <script src="script.js"></script>
+  <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+</body>
+</html>
