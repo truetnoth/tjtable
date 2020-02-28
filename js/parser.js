@@ -48,10 +48,44 @@ let copyToClipboard = function (text) {
   document.body.removeChild(placeholder);
 }
 
+let mobileTableHeads = function () {
+  let props = document.getElementById("table-props").value.split("; ");
+  let maxWidth = props.shift();
+  let heads = document.getElementById("table-headers").value.split("; ");
+  let result = "";
+  if (heads[1] === undefined) {
+    heads[1] = "";
+  }
+  result += `<div class="mobile-table_row">\n<div class="mobile-table__key" style="width: ${props[0]}">${heads[0]}</div>\n<div class="mobile-table__value" style="width: ${props[1]}">${heads[1]}</div>\n</div>\n`;
+  return `<div class="mobile-table" style="max-width: ${maxWidth};">\n<div class="mobile-table__section">\n${result}`;
+}
+
+let mobileTableData = function (th) {
+  let table = th;
+  var lines = document.getElementById("table-data").value.split("\n");
+  for (var i = 0; i < lines.length; i++) {
+    table += `<div class="mobile-table_row">\n`
+    var items = lines[i].split("; ");
+    for (var j = 0; j < items.length; j++) {
+      table += `<div class="mobile-table__key">${items[j]}</div>\n`;
+    }
+    table += `</div>\n`;
+  }
+  return table += `</div>\n</div>`;
+
+}
+
+let button_desktop = document.getElementById("button_desktop");
+let button_mobile = document.getElementById("button_mobile");
 
 take_result.addEventListener("click", function() {
   take_result.innerText = "👍🏻";
   setTimeout(back, 1000);
-  let table = tableData(tableHeads());
-  copyToClipboard(table);
+  if (button_desktop.checked) {
+    let table = tableData(tableHeads());
+    copyToClipboard(table);
+  } else {
+    let table = mobileTableData(mobileTableHeads());
+    copyToClipboard(table);
+  }
 });
