@@ -1,9 +1,3 @@
-let button = document.querySelector(".take_result");
-
-button.addEventListener("click", function() {
-  alert("Код таблицы скопирован в буфер обмена");
-});
-
 function showInstruction() {
   let container = document.querySelector(".instruction_container");
   let arrow = document.querySelector(".arrow");
@@ -16,4 +10,25 @@ function showInstruction() {
     arrow.style.backgroundImage = "url(img/arrow-up.svg)";
   }
 }
+
+let tablePropsArea = document.getElementById("table-props");
+let tableHeadersArea = document.getElementById("table-headers");
+let tableDataArea = document.getElementById("table-data");
+
+tablePropsArea.value = localStorage.getItem('tableProps');
+tableHeadersArea.value = localStorage.getItem('tableHeaders');
+tableDataArea.value = localStorage.getItem('tableData');
+
+tablePropsArea.oninput = () => {
+  localStorage.setItem("tableProps", tablePropsArea.value);
+};
+
+tableHeadersArea.oninput = () => {
+  localStorage.setItem("tableHeaders", tableHeadersArea.value);
+};
+
+tableDataArea.oninput = () => {
+  localStorage.setItem("tableData", tableDataArea.value);
+};
+
 

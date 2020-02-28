@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    textarea {
+      display: block;
+      margin: 10px;
+      resize: none;
+    }
+    button {
+      display: block;
+      margin-top: 10px;
+      width: 200px;
+      border: none;
+      background-color: red;
+      border-radius: 10px;
+      height: 38px;
+      outline: none;
+      font-size: 17px;
+    }
+      button:hover {
+        opacity: .7;
+        cursor: pointer;
+      }
+  </style>
+</head>
+<body>
+  <input type="text" id="table-props" placeholder="Параметры таблицы" size="100">
+  <input type="text" id="table-headers" placeholder="Заголовки таблицы" size="100">
+  <textarea name="test" id="table-data" cols="100" rows="10" placeholder="Данные таблицы"></textarea>
+  <button class="copy">Скопировать</button>
+  <script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+  <script src="parser.js"></script>
+</body>
+</html>

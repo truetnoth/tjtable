@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Т—Ж табличник</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <svg class="xjE89" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 14" fill="#000000"><path d="M90.5 0L85 4.9V0h-6.3v4.9L73.3 0h-8.8l8.6 6.7-9.3 7.3h8.8l6.1-5.5V14H85V8.5l6.1 5.5h8.8l-9.3-7.3L99.3 0h-8.8zM0 0v5.5h7.4V14h6.4V5.5h7.4V0H0zm25.2 9h38.6V4H25.2v5z"></path></svg>
+    <h2>Привет!</h2>
+    <p>это Т—Ж табличник, он нужен верстальщикам чтобы не умирать от верстки таблиц.</p>
+    <p>Работает он так:</p>
+    <ol>
+      <li>Выбираете для какого устройства формируется таблица</li>
+      <li>Заполняете 3 поля ниже: в первом поле будут размер таблицы и размеры столбцов друг за другом</li>
+      <li>Во втором — заголовки таблицы</li>
+      <li>В третьем — данные таблицы</li>
+      <li>В самом низу под катом подробная инструкиця, как правильно заполнить поля, чтобы всё работало хорошо</li>
+      <li>Если поля заполнены — не бойтесь закрывать страницу, скрипт всё сохраняет в локальном хранилище</li>
+    </ol>
+  </header>
+  <main>
+    <div class="platform_chooser">
+      <input type="radio" name="platform" id="button_desktop" checked>
+      <label for="button_desktop">Таблица для десктопа</label>
+      <input type="radio" name="platform" id="button_mobile">
+      <label for="button_mobile">Таблица для мобилок и планшетов</label>
+    </div>
+    <input type="text" id="table-props" placeholder="Ширина таблицы; ширина первой колонки; ширина второй колонки; ..." size="60">
+    <input type="text" id="table-headers" placeholder="Заголовок 1; Заголовок 2; ..." size="60">
+    <textarea id="table-data" cols="100" rows="10" placeholder="Данные 1; Данные 2; Данные 3; Данные 4"></textarea>
+    <button class="take_result">Забрать код таблицы</button>
+  </main>
+  <section>
+    <button onclick="showInstruction()" class="instruction_button">Инструкция по форматированию<span class="arrow"></span></button>
+    <div class="instruction_container">
+      <ul>
+        <li>CSV – это текстовый формат отображения табличных данных. Он очень простой в освоении;</li>
+        <li>В этом скрипте я использую CSV-подобный синтаксис;</li>
+        <li class="warning">Очень важно соблюдать форматирование, иначе что-то может пойти не так;</li>
+        <li>Откройте свой любимый текстовый редактор и создайте в нем файл в формате .csv;</li>
+        <li>В формате .csv все данные по горизонтали разделяются между собой точкой с запятой и пробелом после него (; ), все данные по вертикали — переносом строки;</li>
+        <li>Первая строка вашего файла будет содержать 1+N чисел, где первое число это ширина всей таблицы, а последующие ширины каждого столбца;</li>
+        <li>Вторая строка будет представлять из себя заголовки таблицы;</li>
+        <li>Дальше идут табличные данные. Для примера:</li>
+      </ul>
+      <img src="img/img_1.png" alt="" width="100%">
+      <p>У меня в VSCode стоит очень удобный плагин, который подсвечивает столбцы в .csv, вот <a href="https://github.com/mechatroner/vscode_rainbow_csv">ссылка</a></p>
+      <ul>
+        <li>Для мобильной версии всё аналогично:</li>
+      </ul>
+      <img src="img/img_2.png" alt="" width="100%">
+      <ul>
+        <li>Примеры кода вставлю сюда позже, ближе к «релизу» :)</li>
+        <li>WARNING: версия для мобильных таблиц пока в разработке, переключатель не функционирует.</li>
+      </ul>
+    </div>
+  </section>
+  <footer>
+    <h3>Сделал Валера, с ❤️ к Т—Ж, а баги сюду: <a href="https://github.com/truetnoth/tjtable/issues" target="_blank">Баглист</a></h3>
+  </footer>
+  <script src="js/script.js"></script>
+  <script src="js/parser.js"></script>
+</body>
+</html>

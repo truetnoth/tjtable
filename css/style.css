@@ -46,6 +46,24 @@ header p, .instruction_container ul {
   list-style: disc;
 }
 
+input[type="text"], textarea {
+  display: block;
+  margin-top: 10px;
+  width: 100%;
+  height: 35px;
+  outline: none;
+  font-size: 18px;
+  padding-left: 10px;
+  border: 1px solid #00f1d8;
+}
+
+textarea {
+  resize: vertical;
+  height: 400px;
+  padding-top: 10px;
+  white-space: nowrap;
+}
+
 .instruction_container ul li {
   padding: 5px 0;
 }
@@ -58,6 +76,8 @@ header p, .instruction_container ul {
 
 .take_result {
   display: block;
+  width: 280px;
+  height: 48px;
   background-color: #00f1d8;
   color: black;
   font-family: sans-serif;
@@ -76,6 +96,11 @@ header p, .instruction_container ul {
 
 .platform_chooser label {
   padding-top: 3px;
+}
+
+.warning {
+  background-color: rgb(255, 131, 131);
+  color: white;
 }
 
 .inputfile {
