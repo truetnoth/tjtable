@@ -11,14 +11,14 @@ let tableHeads = function () {
   let heads = document.getElementById("table-headers").value.split("; ");
   let result = "";
   for (let i = 0, j = 0; i < props.length, j < heads.length; i++, j++) {
-    result += `<th width="${props[i]}">${heads[j]}</th>\n`;
+    result += `<th style="width: ${props[i]}">${heads[j]}</th>\n`;
   }
   if (heads.length < props.length) {
     for (let i = 0; i < props.length - (props.length - heads.length); i++) {
       props.shift();
     }
     for (let i = 0; i < props.length; i++) {
-      result += `<th width="${props[i]}"></th>\n`
+      result += `<th style="width: ${props[i]}"></th>\n`
     }
   };
   return `<table class="desktop-table desktop-table--tfoot desktop-table--thead-with-border" style="width: ${maxWidth}!important;">\n<thead>\n<tr>\n${result}</tr>\n</thead>\n<tbody>\n`

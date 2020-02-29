@@ -161,4 +161,17 @@ textarea {
   display: none;
 }
 
+.mobile {
+  display: none;
+  width: 80%;
+  margin: 40px auto;
+}
 
+@media only screen and (max-width: 600px) {
+  header, section, main, footer{
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+}
