@@ -24,15 +24,15 @@
     </ol>
   </header>
   <main>
+    <input type="text" id="table-props" placeholder="Ширина таблицы; ширина первой колонки; ширина второй колонки; ..." size="60">
+    <input type="text" id="table-headers" placeholder="Заголовок 1; Заголовок 2; ..." size="60">
+    <textarea id="table-data" cols="100" rows="10" placeholder="Данные 1; Данные 2; Данные 3; Данные 4"></textarea>
     <div class="platform_chooser">
       <input type="radio" name="platform" id="button_desktop" checked>
       <label for="button_desktop">Таблица для десктопа</label>
       <input type="radio" name="platform" id="button_mobile">
       <label for="button_mobile">Таблица для мобилок и планшетов</label>
     </div>
-    <input type="text" id="table-props" placeholder="Ширина таблицы; ширина первой колонки; ширина второй колонки; ..." size="60">
-    <input type="text" id="table-headers" placeholder="Заголовок 1; Заголовок 2; ..." size="60">
-    <textarea id="table-data" cols="100" rows="10" placeholder="Данные 1; Данные 2; Данные 3; Данные 4"></textarea>
     <button class="take_result">Забрать код таблицы</button>
   </main>
   <section>
@@ -65,5 +65,6 @@
   </footer>
   <script src="js/script.js"></script>
   <script src="js/parser.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.10.3/beautify-html.js"></script>
 </body>
 </html>

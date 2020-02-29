@@ -83,9 +83,9 @@ take_result.addEventListener("click", function() {
   setTimeout(back, 1000);
   if (button_desktop.checked) {
     let table = tableData(tableHeads());
-    copyToClipboard(table);
+    copyToClipboard(window.html_beautify(table));
   } else {
     let table = mobileTableData(mobileTableHeads());
-    copyToClipboard(table);
+    copyToClipboard(window.html_beautify(table));
   }
 });
