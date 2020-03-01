@@ -56,7 +56,7 @@ let mobileTableHeads = function () {
   if (heads[1] === undefined) {
     heads[1] = "";
   }
-  result += `<div class="mobile-table_row">\n<div class="mobile-table__key" style="width: ${props[0]}">${heads[0]}</div>\n<div class="mobile-table__value" style="width: ${props[1]}">${heads[1]}</div>\n</div>\n`;
+  result += `<div class="mobile-table__row">\n<div class="mobile-table__key" style="width: ${props[0]}">${heads[0]}</div>\n<div class="mobile-table__value" style="width: ${props[1]}">${heads[1]}</div>\n</div>\n`;
   return `<div class="mobile-table" style="max-width: ${maxWidth};">\n<div class="mobile-table__section">\n${result}`;
 }
 
