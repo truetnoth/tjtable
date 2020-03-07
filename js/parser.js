@@ -64,11 +64,9 @@ let mobileTableData = function (th) {
   let table = th;
   var lines = document.getElementById("table-data").value.split("\n");
   for (var i = 0; i < lines.length; i++) {
-    table += `<div class="mobile-table_row">\n`
+    table += `<div class="mobile-table__row">\n`
     var items = lines[i].split("; ");
-    for (var j = 0; j < items.length; j++) {
-      table += `<div class="mobile-table__key">${items[j]}</div>\n`;
-    }
+    table += `<div class="mobile-table__key">${items[0]}</div>\n<div class="mobile-table__value">${items[1]}</div>`;
     table += `</div>\n`;
   }
   return table += `</div>\n</div>`;
