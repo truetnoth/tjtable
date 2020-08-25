@@ -1,6 +1,5 @@
 let take_result = document.querySelector(".take_result");
 
-
 let back = function () {
   take_result.innerText = "Забрать код таблицы";
 }
@@ -66,6 +65,9 @@ let mobileTableData = function (th) {
   for (var i = 0; i < lines.length; i++) {
     table += `<div class="mobile-table__row">\n`
     var items = lines[i].split("; ");
+    if (items[1] === undefined) {
+      items[1] = "";
+    };
     table += `<div class="mobile-table__key">${items[0]}</div>\n<div class="mobile-table__value">${items[1]}</div>`;
     table += `</div>\n`;
   }
