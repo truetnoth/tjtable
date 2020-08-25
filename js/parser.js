@@ -20,7 +20,7 @@ let tableHeads = function () {
       result += `<th style="width: ${props[i]}"></th>\n`
     }
   };
-  return `<table class="desktop-table desktop-table--tfoot desktop-table--thead-with-border" style="width: ${maxWidth}!important;">\n<thead>\n<tr>\n${result}</tr>\n</thead>\n<tbody>\n`
+  return `<table class="desktop-table desktop-table--thead-with-border" style="width: ${maxWidth}!important;">\n<thead>\n<tr>\n${result}</tr>\n</thead>\n<tbody>\n`
 }
 
 let tableData = function (th) {
